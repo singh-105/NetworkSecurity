@@ -3,14 +3,9 @@ pandas
 numpy
 pymongo
 certifi
-pymongo[srv]
+pymongo[srv]==4.7
 scikit-learn
-mlflow
-pyaml
-dagshub
-fastapi
-uvicorn
-python-multipart
+pymongo
 
 
--e .
+##-e .
