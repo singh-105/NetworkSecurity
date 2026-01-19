@@ -8,5 +8,6 @@ scikit-learn
 pymongo
 pyaml
 dill
+mlflow
 
 ##-e .

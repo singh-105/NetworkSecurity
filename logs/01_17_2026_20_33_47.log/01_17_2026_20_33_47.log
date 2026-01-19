@@ -1,4 +1,0 @@
-[ 2026-01-17 20:33:48,465 ] 19 root - INFO - Initiate the data ingestion
-[ 2026-01-17 20:33:48,465 ] 34 root - INFO - Connecting to MongoDB
-[ 2026-01-17 20:33:48,676 ] 96 pymongo.serverSelection - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 696ba4d4d966f9179883eb55, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-xoxlzft-shard-00-00.4eur1cm.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-xoxlzft-shard-00-01.4eur1cm.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-xoxlzft-shard-00-02.4eur1cm.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "696ba4d4d966f9179883eb55"}, "remainingTimeMS": 30}
-[ 2026-01-17 20:33:50,179 ] 41 root - INFO - Number of records fetched from MongoDB: 0

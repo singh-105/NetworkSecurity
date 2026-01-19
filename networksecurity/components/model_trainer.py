@@ -28,11 +28,11 @@ from sklearn.ensemble import (
     GradientBoostingClassifier,
     RandomForestClassifier,
 )
-
+import mlflow
+from urllib.parse import urlparse
 
 
 class ModelTrainer:
-
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
         try:
             self.model_trainer_config=model_trainer_config
@@ -40,8 +40,20 @@ class ModelTrainer:
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
+    def track_mlflow(self,best_model,classificationmetric):
+        
+        with mlflow.start_run():
+            f1_score=classificationmetric.f1_score
+            precision_score=classificationmetric.precision_score
+            recall_score=classificationmetric.recall_score
 
+            
 
+            mlflow.log_metric("f1_score",f1_score)
+            mlflow.log_metric("precision",precision_score)
+            mlflow.log_metric("recall_score",recall_score)
+            mlflow.sklearn.log_model(best_model,"model")
+           
 
     def train_model(self,X_train,y_train,x_test,y_test):
         models = {
